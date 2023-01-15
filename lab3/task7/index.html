@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <script defer src="script.js"></script>
+    <style>
+        @keyframes blink {
+            0% { box-shadow: 1em 0 5em 2em rgb(217, 217, 253); }
+            50% { box-shadow: none; }
+            100% { box-shadow: 1em 0 5em 2em rgb(217, 217, 253); }
+        }
+        div{
+            display: flex;
+            height: 500px;
+            justify-content: center;
+            align-items: center;
+        }
+        input{
+            background-color: rgb(217, 217, 253);
+            border: 2px blue solid;
+            border-radius: 25px;
+            padding: 10px 20px;
+        }
+        input:hover{
+            background-color: rgb(248, 210, 216);
+            box-shadow: 1em 0 5em 2em rgb(217, 217, 253);
+            animation: blink 3.0s infinite;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <input type="button" value="hover to blink">
+    </div>
+    
+</body>
+</html>

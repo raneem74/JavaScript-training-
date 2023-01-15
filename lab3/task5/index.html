@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <script defer src="script.js"></script>
+    <style>
+        #container{
+            border: 2px black solid;
+            width: 50%;
+            height: 200px;
+            padding: 20px; 
+        }
+        #Username:invalid ~ #UsernameID:after{
+            content: "the required user name may only be a series of alphabetical character";
+            font-size: medium;
+            color: gray;
+
+        }
+        #email:invalid ~ #emailID:after{
+            content: "the required user name may not include any special character rather than @";
+            font-size: medium;
+            color: gray;
+
+        }
+ 
+    </style>
+</head>
+<body>
+    <div id="container">
+        <h1>change email address</h1>
+        <form>
+            <input type="text" id="Username" placeholder="Usernames" required pattern="[a-zA-Z]+" ><br>
+            <label for="Username" id="UsernameID"></label><br>
+            <input type="text" id="email" placeholder="Email"  required pattern="[a-zA-Z0-9]+@[a-zA-Z0-9]+" ><br>
+            <label for="Username" id="emailID"></label><br>
+            <input type="submit" style="margin: 10px;">
+        </form>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rye&display=swap');
+    </style>        
+    <style>
+        #container{
+            width: 300px;
+            height: 500px;
+            border: 5px red solid;
+            border-radius: 20px;
+            display: grid;
+        }
+        #container:after {
+			content: attr(value) ' ♠';
+            font-size: 100px;
+            justify-self: center;
+            align-self: center;
+		}
+        #one,#two{
+            font-family: "Rye";
+            font-size: 30px;
+            padding: 10px;
+            display: grid;
+        }
+        #two{
+            justify-self:end ;
+            align-self: flex-end;
+            order:1;
+        }
+        :not(#two) {
+            order:-1;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="one">A</div>
+        <div id="two">A</div>
+    </div>
+    
+</body>
+</html>
